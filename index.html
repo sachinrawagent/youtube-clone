@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/youtube.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <nav>
+        <div class="logo">
+          <img
+            src="https://blog.logomyway.com/wp-content/uploads/2020/09/youtube-logo-4.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="input">
+          <input type="text" id="video" placeholder="Search" />
+          <button onclick="searchVideo()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div class="icons">
+          <i class="fas fa-microphone"></i>
+          <i class="far fa-play-circle"></i>
+          <i class="far fa-bell"></i>
+          <p id="username">SignIn</p>
+
+          <a href="login.html">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+              alt="preview"
+              id="imgPrev"
+            />
+          </a>
+        </div>
+      </nav>
+    </div>
+    <hr />
+    <div class="buttons">
+      <button>All</button>
+      <button>Comedies</button>
+      <button>Thrillers</button>
+      <button>Spider-Man</button>
+      <button>Conversation</button>
+      <button>Sci-fi Films</button>
+      <button>Gaming</button>
+      <button>Songs</button>
+      <button>Bollywood</button>
+    </div>
+    <div class="main">
+      <div class="sidenav">
+        <div class="links">
+          <ul>
+            <li><i class="fas fa-home"></i> Home</li>
+          </ul>
+          <ul>
+            <a href="trending.html"
+              ><li><i class="far fa-compass" id="popular"></i> Explore</li></a
+            >
+          </ul>
+          <ul>
+            <li><i class="fas fa-video"></i>Subscription</li>
+          </ul>
+          <hr class="hr" />
+          <ul>
+            <li><i class="fas fa-book-open"></i>Library</li>
+          </ul>
+          <ul>
+            <li><i class="fas fa-history"></i> History</li>
+          </ul>
+          <ul>
+            <li><i class="far fa-play-circle"></i>Your videos</li>
+          </ul>
+          <ul>
+            <li><i class="far fa-clock"></i>Watch later</li>
+          </ul>
+          <ul>
+            <li><i class="far fa-thumbs-up"></i>Liked videos</li>
+          </ul>
+          <ul>
+            <li><i class="fas fa-chevron-down"></i>Show More</li>
+          </ul>
+        </div>
+      </div>
+      <div class="disContainer">
+        <div id="displayData"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./scripts/youtube.js"></script>
+
+<!-- <iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/LMZPnwz_dT0"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe> -->
+
+<!-- GET  HTTP/1.1
+
+Authorization: Bearer [YOUR_ACCESS_TOKEN]
+Accept: application/json -->
+
+<!-- 2nd -->
+<!-- GET https://youtube.googleapis.com/youtube/v3/search?part=snippet&location=india&maxResults=20&order=viewCount&q=tesla&regionCode=IN&type=video&key=AIzaSyCnuOGuunVmorG5VpeEKXK2nufzxpMqyjI HTTP/1.1
+
+Authorization: Bearer [YOUR_ACCESS_TOKEN]
+Accept: application/json -->
+
+<!-- 1st -->
+<!-- GET https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&order=viewCount&q=tela&regionCode=IN&type=video&type=channel&key=[YOUR_API_KEY] HTTP/1.1
+
+Authorization: Bearer [YOUR_ACCESS_TOKEN]
+Accept: application/json -->
